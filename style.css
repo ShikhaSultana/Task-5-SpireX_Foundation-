@@ -1,0 +1,295 @@
+/* ============================================
+   Testimonials Section
+   Responsive · interactive card carousel
+   ============================================ */
+
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --ink: #0f172a;
+  --ink-soft: #475569;
+  --muted: #64748b;
+  --line: #e6e9f0;
+  --accent: #4f46e5;
+  --accent-2: #7c3aed;
+  --accent-3: #06b6d4;
+  --star: #f59e0b;
+  --radius: 20px;
+  --shadow: 0 18px 50px rgba(15, 23, 42, 0.10);
+  --font: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(79, 70, 229, 0.10), transparent 40%),
+    radial-gradient(circle at 90% 100%, rgba(6, 182, 212, 0.10), transparent 40%),
+    var(--bg);
+  min-height: 100vh;
+  padding: 70px 20px 90px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.tst__header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 44px;
+}
+
+.tst__eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(79, 70, 229, 0.10);
+  padding: 7px 16px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.tst__header h1 {
+  font-size: clamp(1.9rem, 5vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.tst__header p {
+  margin-top: 16px;
+  font-size: clamp(0.95rem, 2.4vw, 1.08rem);
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ============================================
+   CAROUSEL
+   ============================================ */
+.carousel {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.carousel__viewport {
+  overflow: hidden;
+  padding: 10px 4px 30px;
+}
+
+.carousel__track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* ---------- Card ---------- */
+.tcard {
+  flex: 0 0 calc((100% - 48px) / 3);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 28px;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.tcard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(79, 70, 229, 0.35);
+  box-shadow: var(--shadow);
+}
+
+.tcard__quote {
+  font-size: 2.6rem;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: 0.25;
+  margin-bottom: 6px;
+  font-family: Georgia, serif;
+}
+
+.tcard__stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+  color: var(--star);
+  font-size: 0.95rem;
+}
+
+.tcard__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  flex: 1;
+}
+
+.tcard__person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.tcard__avatar {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+}
+
+.tcard__meta h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.tcard__meta p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.tcard__company {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--accent);
+}
+
+/* ============================================
+   CONTROLS
+   ============================================ */
+.carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 8px;
+}
+
+.nav-btn {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.4);
+}
+
+.nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  gap: 9px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: none;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.dot.active {
+  width: 26px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+/* ============================================
+   STATS STRIP
+   ============================================ */
+.stats {
+  max-width: 1120px;
+  margin: 60px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 34px 28px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.stat { text-align: center; }
+
+.stat__num {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-weight: 800;
+  background: linear-gradient(90deg, #a5b4fc, #67e8f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat__label {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 980px) {
+  .tcard { flex: 0 0 calc((100% - 24px) / 2); }
+}
+
+@media (max-width: 640px) {
+  body { padding: 50px 14px 70px; }
+  .tcard { flex: 0 0 100%; }
+  .carousel__track { gap: 18px; }
+  .stats { padding: 26px 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

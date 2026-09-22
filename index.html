@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials — What Our Customers Say</title>
+  <meta name="description" content="A responsive, interactive testimonials section with a card-based carousel built with HTML, CSS, and JavaScript." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="tst__header">
+    <span class="tst__eyebrow">Testimonials</span>
+    <h1>Loved by teams at world-class companies</h1>
+    <p>See how professionals from leading organizations use our platform to ship faster and work smarter every day.</p>
+  </header>
+
+  <!-- ================= CAROUSEL ================= -->
+  <section class="carousel" aria-label="Customer testimonials">
+    <div class="carousel__viewport">
+      <div class="carousel__track" id="track">
+
+        <!-- 1 -->
+        <article class="tcard">
+          <div class="tcard__quote" aria-hidden="true">&ldquo;</div>
+          <div class="tcard__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="tcard__text">
+            This platform completely transformed how our engineering team collaborates.
+            Deployment times dropped by 60% in the first quarter, and the onboarding was
+            effortless. It's now core to our workflow.
+          </p>
+          <div class="tcard__person">
+            <div class="tcard__avatar" aria-hidden="true">AR</div>
+            <div class="tcard__meta">
+              <h3>Aarav Raman</h3>
+              <p>Senior Engineering Manager</p>
+              <span class="tcard__company">◆ Google</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="tcard">
+          <div class="tcard__quote" aria-hidden="true">&ldquo;</div>
+          <div class="tcard__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="tcard__text">
+            The analytics are incredibly powerful yet simple to use. Our product decisions
+            are now backed by real data instead of guesswork, and the whole team adopted it
+            within days.
+          </p>
+          <div class="tcard__person">
+            <div class="tcard__avatar" aria-hidden="true">MC</div>
+            <div class="tcard__meta">
+              <h3>Maya Chen</h3>
+              <p>Head of Product</p>
+              <span class="tcard__company">◆ Microsoft</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="tcard">
+          <div class="tcard__quote" aria-hidden="true">&ldquo;</div>
+          <div class="tcard__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="tcard__text">
+            Reliability is everything at our scale, and this solution has never let us down.
+            The support team responds in minutes, and the uptime has been flawless for over
+            a year.
+          </p>
+          <div class="tcard__person">
+            <div class="tcard__avatar" aria-hidden="true">DK</div>
+            <div class="tcard__meta">
+              <h3>Daniel Kim</h3>
+              <p>Director of Infrastructure</p>
+              <span class="tcard__company">◆ Amazon</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="tcard">
+          <div class="tcard__quote" aria-hidden="true">&ldquo;</div>
+          <div class="tcard__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="tcard__text">
+            We rolled it out across five regional teams and the consistency it brought was
+            immediate. It's rare to find a tool that scales this smoothly without adding
+            complexity.
+          </p>
+          <div class="tcard__person">
+            <div class="tcard__avatar" aria-hidden="true">SP</div>
+            <div class="tcard__meta">
+              <h3>Sofia Patel</h3>
+              <p>VP of Operations</p>
+              <span class="tcard__company">◆ Netflix</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="tcard">
+          <div class="tcard__quote" aria-hidden="true">&ldquo;</div>
+          <div class="tcard__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="tcard__text">
+            The integration with our existing stack was seamless. Within a week we saw a
+            measurable lift in team productivity and a big drop in manual, repetitive work.
+          </p>
+          <div class="tcard__person">
+            <div class="tcard__avatar" aria-hidden="true">LN</div>
+            <div class="tcard__meta">
+              <h3>Liam Novak</h3>
+              <p>Lead Software Architect</p>
+              <span class="tcard__company">◆ Spotify</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="tcard">
+          <div class="tcard__quote" aria-hidden="true">&ldquo;</div>
+          <div class="tcard__stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="tcard__text">
+            From the first demo to full company-wide adoption, everything felt polished and
+            intentional. It's the kind of product that quietly makes everyone's job easier.
+          </p>
+          <div class="tcard__person">
+            <div class="tcard__avatar" aria-hidden="true">EO</div>
+            <div class="tcard__meta">
+              <h3>Emma O'Brien</h3>
+              <p>Chief Technology Officer</p>
+              <span class="tcard__company">◆ Adobe</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="carousel__controls">
+      <button class="nav-btn" id="prevBtn" aria-label="Previous testimonials">‹</button>
+      <div class="dots" id="dots" role="tablist" aria-label="Testimonial pages"></div>
+      <button class="nav-btn" id="nextBtn" aria-label="Next testimonials">›</button>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="stats" aria-label="Company statistics">
+    <div class="stat">
+      <div class="stat__num" data-count="12000" data-suffix="+">0</div>
+      <div class="stat__label">Happy customers</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num" data-count="98" data-suffix="%">0</div>
+      <div class="stat__label">Satisfaction rate</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num" data-count="150" data-suffix="+">0</div>
+      <div class="stat__label">Countries served</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num" data-count="4.9" data-suffix="/5" data-decimal="1">0</div>
+      <div class="stat__label">Average rating</div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
